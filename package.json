@@ -15,7 +15,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "run-s build:icons build",
     "dev": "start-storybook -p 6006",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\"",
     "format": "yarn prettier --write",
