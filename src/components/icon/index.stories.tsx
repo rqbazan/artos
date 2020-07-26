@@ -1,6 +1,6 @@
 import React from 'react'
 import { withKnobs, select } from '@storybook/addon-knobs'
-import SvgSpin from '../../icons/spin'
+import { SvgSpin } from '~/icons'
 import { Icon } from './index'
 
 export default {

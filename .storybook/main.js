@@ -1,3 +1,5 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+
 module.exports = {
   stories: ['../**/*.stories.tsx'],
   addons: [
@@ -10,4 +12,15 @@ module.exports = {
     '@storybook/addon-backgrounds',
     'storybook-addon-paddings',
   ],
+  webpackFinal: config => {
+    const tsConfigPathsPlugin = new TsconfigPathsPlugin()
+
+    if (config.resolve.plugins) {
+      config.resolve.plugins.push(tsConfigPathsPlugin)
+    } else {
+      config.resolve.plugins = [tsConfigPathsPlugin]
+    }
+
+    return config
+  },
 }
