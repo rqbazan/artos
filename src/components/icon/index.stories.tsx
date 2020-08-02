@@ -12,5 +12,5 @@ export default {
 export const Default = () => {
   const size = select('size', ['small', 'medium', 'large'], 'small')
 
-  return <Icon svg={SvgSpin} size={size} />
+  return <Icon as={SvgSpin} size={size} />
 }
