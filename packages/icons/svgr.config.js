@@ -1,7 +1,7 @@
 const path = require('path')
 const prettier = require('prettier')
 const { camelCase, capitalize } = require('lodash')
-const prettierOptions = require('./.prettierrc.json')
+const prettierConfig = require('../../.prettierrc.json')
 
 function indexTemplate(filePaths) {
   const source = filePaths
@@ -13,7 +13,10 @@ function indexTemplate(filePaths) {
     })
     .join('\n')
 
-  return prettier.format(source, prettierOptions)
+  return prettier.format(source, {
+    ...prettierConfig,
+    parser: 'typescript',
+  })
 }
 
 module.exports = {

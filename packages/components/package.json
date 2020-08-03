@@ -1,0 +1,22 @@
+{
+  "name": "@artos/components",
+  "version": "0.0.0",
+  "main": "dist/components.cjs.js",
+  "module": "dist/components.esm.js",
+  "types": "dist/components.cjs.d.ts",
+  "author": "Ricardo Alexis Quiroz Bazan",
+  "license": "MIT",
+  "peerDependencies": {
+    "clsx": ">=1",
+    "react": ">=16",
+    "reakit": ">=1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.0"
+  },
+  "devDependencies": {
+    "clsx": "^1.1.1",
+    "react": "^16.13.1",
+    "reakit": "^1.1.2"
+  }
+}
