@@ -1,5 +1,6 @@
-import React from 'react'
-import { ContainedButton, ContainedButtonProps } from '../contained-button'
+import * as React from 'react'
+import { ContainedButton } from '../contained-button'
+import type { ContainedButtonProps } from '../contained-button'
 
 const variants = {
   contained: ContainedButton,
@@ -11,6 +12,6 @@ type WithButtonOptionProps<T> = T & {
 
 export type ButtonProps = WithButtonOptionProps<ContainedButtonProps>
 
-export function Button({ variant, ...props }: ButtonProps) {
+export function Button({ variant = 'contained', ...props }: ButtonProps) {
   return React.createElement(variants[variant], props)
 }

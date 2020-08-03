@@ -1,0 +1,22 @@
+{
+  "name": "@artos/icons",
+  "version": "0.0.0",
+  "main": "dist/icons.cjs.js",
+  "module": "dist/icons.esm.js",
+  "types": "dist/icons.cjs.d.ts",
+  "author": "Ricardo Alexis Quiroz Bazan",
+  "license": "MIT",
+  "scripts": {
+    "build": "svgr --out-dir src res"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.0",
+    "@svgr/cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "react": "^16.13.1"
+  }
+}

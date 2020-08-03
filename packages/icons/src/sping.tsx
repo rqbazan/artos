@@ -1,16 +1,9 @@
 import * as React from 'react'
 
-function SvgSpin(props: React.SVGProps<SVGSVGElement>) {
+function SvgSping(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg fill="none" viewBox="0 0 24 24" {...props}>
-      <circle
-        className="opacity-25"
-        cx={12}
-        cy={12}
-        r={10}
-        stroke="currentColor"
-        strokeWidth={4}
-      />
+      <circle className="opacity-25" cx={12} cy={12} r={10} stroke="currentColor" strokeWidth={4} />
       <path
         className="opacity-75"
         fill="currentColor"
@@ -20,4 +13,4 @@ function SvgSpin(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
-export default SvgSpin
+export default SvgSping
