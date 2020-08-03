@@ -1,5 +1,7 @@
+const { content } = require('@artos/purge-css')
+
 module.exports = {
-  purge: ['./src/**/*.js'],
+  purge: content(['./src/**/*.tsx']),
   theme: {
     extend: {
       colors: {
