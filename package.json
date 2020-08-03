@@ -27,7 +27,7 @@
     "check:format": "yarn prettier --list-different",
     "check:types": "manypkg exec tsc --noEmit",
     "validate": "run-p check:*",
-    "now-build": "run-s build build:storybook"
+    "vercel-build": "run-s build build:storybook"
   },
   "dependencies": {
     "@babel/core": "^7.11.0",
