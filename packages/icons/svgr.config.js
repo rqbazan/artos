@@ -1,22 +1,18 @@
 const path = require('path')
-const prettier = require('prettier')
-const { camelCase, capitalize } = require('lodash')
-const prettierConfig = require('../../.prettierrc.json')
+const { camelCase, upperFirst } = require('lodash')
+
+const pascalCase = (v) => upperFirst(camelCase(v))
 
 function indexTemplate(filePaths) {
-  const source = filePaths
+  return filePaths
     .map((filePath) => {
       const basename = path.basename(filePath, path.extname(filePath))
-      const componentName = `Svg${capitalize(camelCase(basename))}`
+      const componentName = `Svg${pascalCase(basename)}`
 
       return `export { default as ${componentName} } from './${basename}'`
     })
     .join('\n')
-
-  return prettier.format(source, {
-    ...prettierConfig,
-    parser: 'typescript',
-  })
+    .concat('\n') // extra new line at the EOF
 }
 
 module.exports = {
