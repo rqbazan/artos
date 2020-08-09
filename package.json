@@ -58,8 +58,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx,json}": [
-      "yarn format",
-      "git add"
+      "yarn format"
     ]
   }
 }
