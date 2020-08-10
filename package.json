@@ -19,7 +19,7 @@
     "build:icons": "yarn workspace @artos/icons run build",
     "build:storybook": "yarn workspace @artos/storybook run build",
     "dev": "preconstruct dev && yarn workspace @artos/storybook run dev",
-    "rm:builds": "manypkg exec rm -rf dist",
+    "rm:builds": "manypkg exec rm -rf **/dist",
     "rm:deps": "manypkg exec rm -rf node_modules && rm -rf node_modules",
     "clean": "run-p rm:*",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|json)\"",

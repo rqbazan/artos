@@ -1,17 +1,18 @@
 import * as React from 'react'
-import { ContainedButton } from '../contained-button'
-import type { ContainedButtonProps } from '../contained-button'
+import { ContainedButton, ContainedButtonProps } from '../contained-button'
+import { TextButton, TextButtonProps } from '../text-button'
 
 const variants = {
   contained: ContainedButton,
+  text: TextButton,
 }
 
 type WithButtonOptionProps<T> = T & {
-  variant: keyof typeof variants
+  variant?: keyof typeof variants
 }
 
-export type ButtonProps = WithButtonOptionProps<ContainedButtonProps>
+export type ButtonProps = WithButtonOptionProps<ContainedButtonProps> | WithButtonOptionProps<TextButtonProps>
 
-export function Button({ variant = 'contained', ...props }: ButtonProps) {
+export function Button({ variant = 'text', ...props }: ButtonProps) {
   return React.createElement(variants[variant], props)
 }

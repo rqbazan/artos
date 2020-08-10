@@ -1,16 +1,5 @@
 const path = require('path')
 
-function getPkgFolder(folderName) {
-  return path.resolve('..', 'packages', folderName)
-}
-
-function includePkg(rule, folderName) {
-  const pkgFolder = getPkgFolder(folderName)
-
-  rule.include.push(pkgFolder)
-  rule.exclude.push(path.join(pkgFolder, 'node_modules'))
-}
-
 function isBabel(use) {
   if (!Array.isArray(use)) {
     return use.loader === 'babel-loader'
@@ -38,11 +27,9 @@ module.exports = {
       .rules
       .find((rule) => isBabel(rule.use));
 
-    const folders = ['components', 'icons']
-
-    folders.forEach((folderName) => {
-      includePkg(babelRule, folderName)
-    })
+    if (babelRule) {
+      babelRule.include.push(path.resolve('../packages'))
+    }
 
     return config
   },

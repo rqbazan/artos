@@ -24,10 +24,11 @@
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "storybook-addon-paddings": "^2.0.2",
-    "tailwindcss": "^1.6.1"
+    "tailwindcss": "^1.6.2"
   },
   "dependencies": {
     "@artos/components": "^0.0.0",
-    "@artos/icons": "^0.0.0"
+    "@artos/icons": "^0.0.0",
+    "@artos/tw-plugins": "^0.0.0"
   }
 }
